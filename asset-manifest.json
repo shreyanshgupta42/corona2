@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Tracker-App/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/Tracker-App/static/js/main.b846ce34.chunk.js",
+    "main.js.map": "/Tracker-App/static/js/main.b846ce34.chunk.js.map",
+    "runtime-main.js": "/Tracker-App/static/js/runtime-main.e8121977.js",
+    "runtime-main.js.map": "/Tracker-App/static/js/runtime-main.e8121977.js.map",
+    "static/js/2.6d03cf45.chunk.js": "/Tracker-App/static/js/2.6d03cf45.chunk.js",
+    "static/js/2.6d03cf45.chunk.js.map": "/Tracker-App/static/js/2.6d03cf45.chunk.js.map",
+    "static/js/3.bea06191.chunk.js": "/Tracker-App/static/js/3.bea06191.chunk.js",
+    "static/js/3.bea06191.chunk.js.map": "/Tracker-App/static/js/3.bea06191.chunk.js.map",
+    "index.html": "/Tracker-App/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/Tracker-App/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.6d03cf45.chunk.js.LICENSE.txt": "/Tracker-App/static/js/2.6d03cf45.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e8121977.js",
+    "static/js/2.6d03cf45.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.b846ce34.chunk.js"
+  ]
+}
