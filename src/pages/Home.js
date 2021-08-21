@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CountryGrid from '../Components/Country/CountryGrid';
 import {
-  Main,
-  SearchButtonWrapper,
   SearchInput,
   TitleWrapper,
 } from './Home.styled';
