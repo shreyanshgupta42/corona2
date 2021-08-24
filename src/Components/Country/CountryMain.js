@@ -2,6 +2,17 @@ import React from 'react';
 import { StyledCountryMain } from './countrymain.styled';
 import 'react-circular-progressbar/dist/styles.css';
 import ProgressBar from 'react-customizable-progressbar';
+import Barchartmain from '../barchart/Barchartmain';
+
+function numFormatter(num) {
+  if(num > 999 && num < 1000000){
+      return (num/1000).toFixed(1) + 'K'; // convert to K for number from > 1000 < 1 million 
+  }else if(num > 1000000){
+      return (num/1000000).toFixed(1) + 'M'; // convert to M for number from > 1 million 
+  }else if(num < 900){
+      return num; // if value < 1000, nothing to do
+  }
+}
 
 const CountryMain = ({
   Country,
@@ -18,10 +29,14 @@ const CountryMain = ({
   casespermillion,
 }) => {
   //   console.log(Country + ' ' + match);
-  updatedAt = updatedAt.substring(11, 19);
+  
+  var da=new Date(updatedAt);
+  console.log(da);
+  updatedAt = String(da).substring(4, 15);
+  var county=Country;
   Country = Country.toUpperCase();
-  deathrate = deathrate.toFixed(2);
-  recoveryrate = recoveryrate.toFixed(2);
+  deathrate = deathrate?deathrate.toFixed(2):0;
+  recoveryrate = recoveryrate?recoveryrate.toFixed(2):0;
 
   var formatter = new Intl.NumberFormat('en-US', {
     maximumSignificantDigits: 3,
@@ -30,16 +45,26 @@ const CountryMain = ({
   return (
     <>
       <StyledCountryMain>
-        <h1>{Country}
-        <div style={{display:"flex",alignContent:"center",justifyContent:"center",fontSize:"15px"}}>
-          <h5>Updated: {updatedAt}</h5>
-          <h5 style={{paddingLeft:"30px"}}>Population: {formatter.format(population)}</h5>
+        <div style={{display:"flex", alignContent:"center" ,justifyContent:"center"}}>
+          <h1 style={{width:"620px"}}>
+            {Country}
+            <div
+              style={{
+                display: 'flex',
+                alignContent: 'center',
+                justifyContent: 'center',
+                fontSize: '15px',
+              }}
+            >
+              <h5>Updated: {updatedAt}</h5>
+              <h5 style={{ paddingLeft: '30px' }}>
+                Population: {numFormatter(population)}
+              </h5>
+            </div>
+          </h1>
         </div>
-        </h1>
-        
 
-        <br></br>
-        <div style={{ height: '75px', paddingTop: '60px' }}>
+        <div style={{ height: '75px', paddingTop: '20px' }}>
           <span
             style={{
               color: '#b30000',
@@ -68,10 +93,19 @@ const CountryMain = ({
             Total Death: {formatter.format(death)}
           </span>
         </div>
-        <div className="d-flex justify-content-between align-item-center" style={{color:"gray",borderColor:"green"}}>
-          <span style={{borderRight:"1px solid #b0b0b0"}} >Cases today: {formatter.format(tc)}</span>
-          <span style={{borderRight:"1px solid #b0b0b0"}}>Deaths today: {formatter.format(td)}</span>
-          <span style={{borderRight:"1px solid #b0b0b0"}}>Critical: {formatter.format(critical)}</span>
+        <div
+          className="d-flex justify-content-between align-item-center"
+          style={{ color: 'gray', borderColor: 'green' }}
+        >
+          <span style={{ borderRight: '1px solid #b0b0b0' }}>
+            Cases today: {formatter.format(tc)}
+          </span>
+          <span style={{ borderRight: '1px solid #b0b0b0' }}>
+            Deaths today: {formatter.format(td)}
+          </span>
+          <span style={{ borderRight: '1px solid #b0b0b0' }}>
+            Critical: {formatter.format(critical)}
+          </span>
           <span>Cases per Million: {formatter.format(casespermillion)}</span>
         </div>
       </StyledCountryMain>
@@ -79,8 +113,9 @@ const CountryMain = ({
         style={{
           display: 'flex',
           justifyContent: 'center',
-          paddingTop: '50px',
+          marginTop: '40px',
           fontSize: '15px',
+          marginBottom: '60px',
         }}
       >
         <ProgressBar
@@ -107,7 +142,8 @@ const CountryMain = ({
           >
             <div>
               Death Rate:<br></br>
-              {deathrate}%
+              {deathrate!==0 && <div>{deathrate}%</div>}
+              {deathrate===0 && <div>NA</div>}
             </div>
           </div>
         </ProgressBar>
@@ -136,11 +172,13 @@ const CountryMain = ({
           >
             <div>
               Recovery Rate:<br></br>
-              {recoveryrate}%
+              {recoveryrate!==0 && <div>{recoveryrate}%</div>}
+              {recoveryrate===0 && <div>NA</div>}
             </div>
           </div>
         </ProgressBar>
       </div>
+      <Barchartmain Country={county}/>
     </>
   );
 };

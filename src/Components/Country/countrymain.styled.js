@@ -5,6 +5,7 @@ export const StyledCountryMain = styled.div`
   text-align: center;
   h1{
     color: black;
+    border-bottom: 1px solid #b0b0b0;
   }
   h5{
     color: gray;
@@ -16,7 +17,6 @@ export const StyledCountryMain = styled.div`
       margin: auto;
       margin-left: 10px;
       margin-top: 1px;
-      /* border-radius: 5px; */
       padding: 20px 20px;
     }
   }
