@@ -45,4 +45,18 @@ export const StyledCountryCard = styled(Link)`
       font-size: 12px;
     }
   }
+  @media (max-width: 400px) {
+    font-size: 8px;
+    div{
+      width: 150px;
+      padding:2px 2px;
+      margin: 0 7px 14px;
+      h1{
+        font-size: 12px;
+      }
+    }
+    h1{
+      font-size: 12px;
+    }
+  }
 `;

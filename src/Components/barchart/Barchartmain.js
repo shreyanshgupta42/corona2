@@ -132,12 +132,19 @@ const Barchartmain = ({ Country }) => {
   }, [loading]);
 
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection:'column',
+        justifyContent: 'center',
+        alignContent: 'center',
+      }}
+    >
       {console.log(10)}
       <div
         style={{
           display: 'flex',
-          justifyContent: 'center',
+          justifyContent: 'space-evenly',
           alignContent: 'center',
         }}
       >
@@ -154,7 +161,7 @@ const Barchartmain = ({ Country }) => {
           Confirmed
         </ButtonStyle>
         <ButtonStyle
-          style={{ marginLeft: '150px', color: 'green' }}
+          style={{ color: 'green' }}
           onClick={() => {
             setRender(2);
             console.log('recovered clicked');
@@ -165,7 +172,7 @@ const Barchartmain = ({ Country }) => {
           Recovered
         </ButtonStyle>
         <ButtonStyle
-          style={{ marginLeft: '150px', color: 'grey' }}
+          style={{ color: 'grey' }}
           onClick={() => {
             setRender(3);
             console.log('death button clicked');
@@ -183,6 +190,7 @@ const Barchartmain = ({ Country }) => {
           justifyContent: 'center',
           alignContent: 'center',
           marginTop: '30px',
+          width: '100%',
         }}
       >
         {console.log(13)}

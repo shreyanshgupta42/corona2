@@ -43,7 +43,12 @@ const CountryMain = ({
   });
 
   return (
-    <>
+    <div style={{
+      display: 'flex',
+      flexDirection:'column',
+      alignContent: 'center',
+      justifyContent: 'center',
+    }}>
       <StyledCountryMain>
         <div
           style={{
@@ -185,7 +190,7 @@ const CountryMain = ({
         </ProgressBar>
       </div>
       <Barchartmain Country={county} />
-    </>
+    </div>
   );
 };
 

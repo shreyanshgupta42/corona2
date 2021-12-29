@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const StyledCountryMain = styled.div`
   color: #636362;
   text-align: center;
+  display: flex;
+  flex-direction: column;
   h1 {
     width: 620px;
     color: black;
@@ -25,6 +27,17 @@ export const StyledCountryMain = styled.div`
     font-size: 10px;
     h1 {
       width: 430px;
+    }
+  }
+  @media (max-width: 400px) {
+    font-size: 10px;
+    h1 {
+      width: 300px;
+    }
+    div {
+      span {
+        padding: 5px 5px;
+      }
     }
   }
 `;

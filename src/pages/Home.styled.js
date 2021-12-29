@@ -23,6 +23,10 @@ export const SearchInput = styled.input`
     font-size: 10px;
     width: 350px;
   }
+  @media (max-width: 400px) {
+    font-size: 10px;
+    width: 250px;
+  }
 `;
 
 export const TitleWrapper = styled.div`
@@ -59,6 +63,6 @@ export const HomeWrapper = styled.div`
   margin: auto;
   width: 1400px;
   @media (max-width: 768px) {
-    width: 700px;
+    width: 100%;
   }
 `;
