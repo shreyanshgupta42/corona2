@@ -26,15 +26,23 @@ export const StyledCountryCard = styled(Link)`
 
     p {
       box-sizing: border-box;
-      width:100%;
+      width: 100%;
       margin: 0;
-      position:relative;
-      span{
+      position: relative;
+      span {
         box-sizing: border-box;
-        width:100px;
+        width: 100px;
         text-align: right;
       }
     }
-
+  }
+  @media (max-width: 768px) {
+    font-size: 10px;
+    div{
+      width: 200px;
+    }
+    h1{
+      font-size: 12px;
+    }
   }
 `;

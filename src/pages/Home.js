@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CountryGrid from '../Components/Country/CountryGrid';
-import { Main, SearchInput, TitleWrapper } from './Home.styled';
+import { Main, SearchInput, TitleWrapper, HomeWrapper } from './Home.styled';
 
 var formatter = new Intl.NumberFormat('en-US', {
   maximumSignificantDigits: 3,
@@ -19,7 +19,6 @@ const renderResults = (response, response2, input) => {
               background: '#ff9999',
             }}
           >
-            
             TotalConfirmed: {formatter.format(response2.Global.TotalConfirmed)}
           </span>
           <span
@@ -36,7 +35,6 @@ const renderResults = (response, response2, input) => {
               background: '#cccccc',
             }}
           >
-            
             TotalRecovered: {formatter.format(response2.Global.TotalRecovered)}
           </span>
         </Main>
@@ -87,7 +85,7 @@ const Home = () => {
   //console.log(input);
 
   return (
-    <div style={{ margin: 'auto', width: '1400px' }}>
+    <HomeWrapper>
       <TitleWrapper>
         <h1>COVID-19 PANDEMIC TRACKER</h1>
       </TitleWrapper>
@@ -104,7 +102,7 @@ const Home = () => {
         </button>
       </SearchButtonWrapper> */}
       {renderResults(response, response2, input)}
-    </div>
+    </HomeWrapper>
   );
 };
 

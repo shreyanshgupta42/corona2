@@ -19,26 +19,9 @@ export const SearchInput = styled.input`
     font-weight: 300;
     color: #8d8d8d;
   }
-`;
-
-export const SearchButtonWrapper = styled.div`
-  text-align: center;
-  margin-bottom: 35px;
-
-  button {
-    color: #fff;
-    width: 125px;
-    height: 40px;
-    background-color: ${({ theme }) => theme.mainColors.blue};
-    margin: auto;
-    padding: 10px 30px;
-    font-size: 15px;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    &:hover {
-      cursor: pointer;
-    }
+  @media (max-width: 768px) {
+    font-size: 10px;
+    width: 350px;
   }
 `;
 
@@ -51,15 +34,31 @@ export const TitleWrapper = styled.div`
     text-transform: uppercase;
     margin: 0 0 10px;
   }
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
 `;
 
 export const Main = styled.div`
-  margin-left: 380px;
+  /* margin-left: 380px; */
   margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
   span {
     font-weight: bold;
     margin-left: 20px;
     padding: 10px;
     border-radius: 10px;
+  }
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
+`;
+
+export const HomeWrapper = styled.div`
+  margin: auto;
+  width: 1400px;
+  @media (max-width: 768px) {
+    width: 700px;
   }
 `;
