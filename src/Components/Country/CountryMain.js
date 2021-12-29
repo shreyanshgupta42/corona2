@@ -5,12 +5,12 @@ import ProgressBar from 'react-customizable-progressbar';
 import Barchartmain from '../barchart/Barchartmain';
 
 function numFormatter(num) {
-  if(num > 999 && num < 1000000){
-      return (num/1000).toFixed(1) + 'K'; // convert to K for number from > 1000 < 1 million 
-  }else if(num > 1000000){
-      return (num/1000000).toFixed(1) + 'M'; // convert to M for number from > 1 million 
-  }else if(num < 900){
-      return num; // if value < 1000, nothing to do
+  if (num > 999 && num < 1000000) {
+    return (num / 1000).toFixed(1) + 'K'; // convert to K for number from > 1000 < 1 million
+  } else if (num > 1000000) {
+    return (num / 1000000).toFixed(1) + 'M'; // convert to M for number from > 1 million
+  } else if (num < 900) {
+    return num; // if value < 1000, nothing to do
   }
 }
 
@@ -29,14 +29,14 @@ const CountryMain = ({
   casespermillion,
 }) => {
   //   console.log(Country + ' ' + match);
-  
-  var da=new Date(updatedAt);
+
+  var da = new Date(updatedAt);
   console.log(da);
   updatedAt = String(da).substring(4, 15);
-  var county=Country;
+  var county = Country;
   Country = Country.toUpperCase();
-  deathrate = deathrate?deathrate.toFixed(2):0;
-  recoveryrate = recoveryrate?recoveryrate.toFixed(2):0;
+  deathrate = deathrate ? deathrate.toFixed(2) : 0;
+  recoveryrate = recoveryrate ? recoveryrate.toFixed(2) : 0;
 
   var formatter = new Intl.NumberFormat('en-US', {
     maximumSignificantDigits: 3,
@@ -45,8 +45,14 @@ const CountryMain = ({
   return (
     <>
       <StyledCountryMain>
-        <div style={{display:"flex", alignContent:"center" ,justifyContent:"center"}}>
-          <h1 style={{width:"620px"}}>
+        <div
+          style={{
+            display: 'flex',
+            alignContent: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <h1>
             {Country}
             <div
               style={{
@@ -142,8 +148,8 @@ const CountryMain = ({
           >
             <div>
               Death Rate:<br></br>
-              {deathrate!==0 && <div>{deathrate}%</div>}
-              {deathrate===0 && <div>NA</div>}
+              {deathrate !== 0 && <div>{deathrate}%</div>}
+              {deathrate === 0 && <div>NA</div>}
             </div>
           </div>
         </ProgressBar>
@@ -172,13 +178,13 @@ const CountryMain = ({
           >
             <div>
               Recovery Rate:<br></br>
-              {recoveryrate!==0 && <div>{recoveryrate}%</div>}
-              {recoveryrate===0 && <div>NA</div>}
+              {recoveryrate !== 0 && <div>{recoveryrate}%</div>}
+              {recoveryrate === 0 && <div>NA</div>}
             </div>
           </div>
         </ProgressBar>
       </div>
-      <Barchartmain Country={county}/>
+      <Barchartmain Country={county} />
     </>
   );
 };

@@ -3,11 +3,12 @@ import styled from 'styled-components';
 export const StyledCountryMain = styled.div`
   color: #636362;
   text-align: center;
-  h1{
+  h1 {
+    width: 620px;
     color: black;
     border-bottom: 1px solid #b0b0b0;
   }
-  h5{
+  h5 {
     color: gray;
   }
   div {
@@ -20,5 +21,10 @@ export const StyledCountryMain = styled.div`
       padding: 20px 20px;
     }
   }
+  @media (max-width: 768px) {
+    font-size: 10px;
+    h1 {
+      width: 430px;
+    }
+  }
 `;
-

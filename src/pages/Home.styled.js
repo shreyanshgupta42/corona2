@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const SearchInput = styled.input`
   display: block;
@@ -21,11 +21,10 @@ export const SearchInput = styled.input`
   }
 `;
 
-
 export const SearchButtonWrapper = styled.div`
   text-align: center;
   margin-bottom: 35px;
-  
+
   button {
     color: #fff;
     width: 125px;
@@ -54,12 +53,13 @@ export const TitleWrapper = styled.div`
   }
 `;
 
-export const Main=styled.div`
-  text-align: center;
-  margin: 0 0 40px;
-  h5 {
-    color: ${({ theme }) => theme.mainColors.blue};
-    margin: 0 0 5px;
+export const Main = styled.div`
+  margin-left: 380px;
+  margin-bottom: 50px;
+  span {
+    font-weight: bold;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 10px;
   }
-
-`
+`;
