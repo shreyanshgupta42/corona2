@@ -1,8 +1,9 @@
 # Screen shots of how the app works
 
-https://drive.google.com/file/d/1LaSzwOw3E9fGosYL2e58bpfhdk_76_rr/view?usp=sharing
-https://drive.google.com/file/d/1PFcBoduIX16LnDuuAiTGCHm3-wd4P8Mt/view?usp=sharing
-https://drive.google.com/file/d/1tlsqvfVI_WgaBmHEoSY04T0Q_vCx6Gy-/view?usp=sharing
+![2023-06-11 14_26_53-Greenshot](https://github.com/shreyanshgupta42/corona2/assets/57253725/119c113e-6b11-47ad-aa6d-0c7659c040e3)
+![2023-06-11 20_29_42-Greenshot](https://github.com/shreyanshgupta42/corona2/assets/57253725/7fde9a2f-d2ef-4562-91a2-fd7c0fb2a8ec)
+![2023-06-11 14_27_06-Greenshot](https://github.com/shreyanshgupta42/corona2/assets/57253725/2866e7c7-e31f-4b2e-8e0b-0475fc4c9ba7)
+
 
 # Getting Started with Create React App
 
